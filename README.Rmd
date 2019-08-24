@@ -18,37 +18,21 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of shinydt is to ...
+The goal of shinydt is to provide a simple web application framework for those who want to view their data (in the form of a csv file) and do basic search/filtering
 
 ## Installation
 
-You can install the released version of shinydt from [CRAN](https://CRAN.R-project.org) with:
+Given the limited usefulness of the shiny application, you aren't going to find the package in [CRAN](https://CRAN.R-project.org). However you could install it with with `devtools`:
 
 ``` r
-install.packages("shinydt")
+devtools::install_github("ck2136/shinydt")
 ```
 
-## Example
+## Use
 
-This is a basic example which shows you how to solve a common problem:
+In order to run the application run the following code:
 
 ```{r example}
 library(shinydt)
-## basic example code
+# run_app()
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
