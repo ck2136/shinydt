@@ -1,11 +1,40 @@
 #' @import shiny
+#' @import shinydashboard
 app_ui <- function() {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
-    # List the first level UI elements here 
-    fluidPage(
-      h1("shinydt")
+    dashboardPage(
+      dashboardHeader(title = "DataViewer"),
+      dashboardSidebar(
+        sidebarMenu(
+          menuItem("Dashboard", tabName = "dashboard", icon=icon("dashboard"))
+        )
+      ),
+      dashboardBody(
+        tabItems(
+          tabItem(
+            tabName = "dashboard",
+            fluidRow(
+              box( 
+                h4("This is a dashboard for viewing a user inputted data frame. Please enter a csv file below"),
+                width = 12
+              )
+            ),
+            fluidRow(
+              box(
+                mod_my_first_module_ui(
+                  'datafile1', 'User data (.csv format)',
+                  accept = c("text/csv", "text/comma-separated-values,text/plain")
+                )
+              )
+            ),
+            fluidRow(
+              dataTableOutput("filetable1")
+            )
+          )
+        )
+      )
     )
   )
 }
