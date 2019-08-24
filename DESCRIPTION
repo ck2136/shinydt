@@ -10,3 +10,5 @@ Imports:
     shiny, 
     golem
 RoxygenNote: 6.1.0
+URL: git@github.com:ck2136/shinydt.git
+BugReports: git@github.com:ck2136/shinydt.git/issues
